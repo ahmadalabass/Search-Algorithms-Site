@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+:root{
+    --bg-color: #1A1A40;
+    --bg-h: #33124e;
+    --card-color: #662E9B ;
+    --text-color: #F8EDEB ;
+}
+body {
+    /* text-align: center; */
+    background-color: var(--bg-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(135deg, #1719af, #2b0252);
+}
+
+nav#home {
+    position: fixed;
+    top: 0;
+    left: -270px;
+    width: 250px;
+    height: 100%;
+    background: rgba(73, 26, 161, 0.726);
+    transition: left 0.9s ease-in;
+    padding-top: 50px;
+    box-shadow: 2px 0 15px rgba(12, 3, 100, 0.4);
+    
+}
+
+nav#home ul {
+    list-style: none;
+    padding: 0;
+}
+@keyframes fillText {
+    0% {
+        color: transparent; /* يجعل الحرف غير مرئي */
+        -webkit-text-stroke: 2px var(--text-color); /* يضيف حدود بيضاء للحروف */
+    }
+    50% {
+        color:  #00abf0; /* لون أزرق نصف شفاف */
+    }
+    75%{
+        color:  #00abf0; /* لون أزرق نصف شفاف */
+
+    }
+    100% {
+        color: var(--text-color); /* يمتلئ بالكامل باللون الأزرق */
+        -webkit-text-stroke: 1px transparent; /* يزيل الحدود */
+    }
+}
+
+.animated-text span {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 32px;
+    animation: fillText 0.8s ease-in forwards;
+    opacity: 0; /* إخفاء الحرف في البداية */
+}
+
+
+nav#home ul li {
+    padding: 15px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s, transform 0.3s;
+    border-radius: 5px;
+}
+
+nav#home ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+nav#home ul li i {
+    color: #00d2ff;
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+nav#home ul li:hover {
+    background: rgba(32, 34, 173, 0.8);
+    transform: scale(1.05);
+}
+
+/* زر القائمة */
+.homee {    
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    background: #00d2ff;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0px 6px 12px rgba(0, 210, 255, 0.4);
+}
+
+.homee:hover {
+    background: #008cba;
+    transform: rotate(90deg);
+}
+
+/* عند تفعيل القائمة */
+body.menu-active nav#home {
+    left: 0;
+    
+}
+
+body.menu-active #content {
+    margin-left: 150px;
+    transition: margin-left 0.5s ease-in;
+}
+
+/* تنسيق المحتوى الرئيسي */
+.main-content {
+    padding: 80px;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature {
+    background:linear-gradient(#56238581,#64126b67);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    text-align: center;
+    transform: rotate(360deg);
+    transition: transform ease-in 3s;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+
+}
+
+.feature h2 {
+    color: var(--text-color);
+}
