@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هيب البيانات</title>
+    <link rel="stylesheet" href="../CSS/Heap_style.css">
+</head>
+<body>
+    <nav id="home">
+        <ul>
+            <li><i class="fas fa-home"></i><a href="Home.html">HOME</a></li>
+            <li><i class="fas fa-car"></i><a href="AVL.html">AVL</a></li>
+            <li><i class="fas fa-car-side"></i><a href="BinaryTree.html">BinaryTree</a></li>
+            <li><i class="fas fa-road"></i><a href="Trie.html">Trie</a></li>
+            <li><i class="fas fa-car-battery"></i><a href="Heap.html">Heap</a></li>
+            <li><i class="fas fa-car-battery"></i><a href="PrioritQueue.html">PrioritQueue</a></li>
+            <li><i class="fas fa-car-battery"></i><a href="Sorting Algorithms.html">Sorting Algorithms</a></li>
+            <li><i class="fas fa-car-battery"></i><a
+                href="bac.htm">Backtracking
+                </a></li>
+        </ul>
+      </nav>
+  
+      <div id="content">
+          <div class="homee" onclick="toggleMenu()">☰</div>
+      </div>
+  <script>
+      function toggleMenu() {
+      document.body.classList.toggle("menu-active");
+  }
+  
+  </script>
+
+    <div class="controls">
+        <input type="number" id="value" placeholder="أدخل قيمة">
+        <button onclick="handleInsert()">إدخال</button>
+        <button onclick="handleExtract()">استخراج الجذر</button>
+        <input type="number" id="value" placeholder="أدخل قيمة">
+        <button onclick="handleSearch()">بحث</button>
+
+    </div>
+
+    <h2>Max Heap :</h2>
+    <canvas id="maxCanvas" width="1400" height="800"></canvas>
+
+
+    <h2>Min Heap :</h2>
+    <canvas id="minCanvas" width="1400" height="800"></canvas>
+   
+
+    <script src="../JS/Heap.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>الصفحة الرئيسية</title>
+        <link rel="stylesheet" href="../CSS/Home_style.css">
+    </head>
+    <body>
+
+        <nav id="home">
+            <ul>
+                <li><i class="fas fa-home"></i><a href="Home.html">HOME</a></li>
+                <li><i class="fas fa-car"></i><a href="AVL.html">AVL</a></li>
+                <li><i class="fas fa-car-side"></i><a
+                        href="BinaryTree.html">BinaryTree</a></li>
+                <li><i class="fas fa-road"></i><a href="Trie.html">Trie</a></li>
+                <li><i class="fas fa-car-battery"></i><a
+                        href="Heap.html">Heap</a></li>
+                <li><i class="fas fa-car-battery"></i><a
+                        href="PrioritQueue.html">PrioritQueue</a></li>
+                <li><i class="fas fa-car-battery"></i><a
+                        href="Sorting Algorithms.html">Sorting
+                        Algorithms</a></li> 
+                        <li><i class="fas fa-car-battery"></i><a
+                        href="bac.htm">Backtracking
+                        </a></li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <div class="homee" onclick="toggleMenu()">☰</div>
+            <section class="main-content">
+                <h1 class="animated-text">Welcome to the world of algorithms and
+                    data structures</h1>
+                <p class="animated-text">Learn about different tree types and
+                    algorithms such as AVL, BinaryTree, Trie, and Heap</p>
+                <div class="features">
+                    <div class="feature">
+                        <h2> AVL</h2>
+                        <p>.هيكل بيانات متوازن يستخدم لتحسين عمليات البحث
+                            والإدراج</p>
+                    </div>
+                    <div class="feature">
+                        <h2>BST</h2>
+                        <p>.هيكل هرمي يُستخدم في تنظيم البيانات وتنفيذ العمليات
+                            بكفاءة</p>
+                    </div>
+                    <div class="feature">
+                        <h2>Trie Tree</h2>
+                        <p>.مثالية لتخزين واسترجاع النصوص بسرعة مثل القواميس</p>
+                    </div>
+                    <div class="feature">
+                        <h2>Heap</h2>
+                        <p>.هيكل بيانات يُستخدم في تنفيذ الأولويات والخوارزميات
+                            مثل Dijkstra</p>
+                    </div>
+                    <div class="feature">
+                        <h2>PrioritQueue</h2>
+                        <p>.هو هيكل بيانات يشبه الطابور العادي، لكنه يضيف ميزة
+                            الأولوية</p>
+                    </div>
+                    <div class="feature">
+                        <h2>Sorting Algorithms</h2>
+                        <p>.نأخذ مجموعة من الأرقام التي يُدخلها المستخدم، ثم
+                            نقوم بفرزها باستخدام خوارزميات الفرز المختلفة</p>
+                    </div>
+                    <div class="feature">
+                        <h2>Backtracking</h2>
+                        <p>هو أسلوب لحل المشكلات يعتمد على تجربة الحلول الممكنة
+                            بشكل تكراري والرجوع للخلف</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script>
+        function toggleMenu() {
+            document.body.classList.toggle("menu-active");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+    let elements = document.querySelectorAll(".animated-text");
+
+    elements.forEach(element => {
+        let text = element.innerText;
+        element.innerHTML = ""; // مسح النص الأصلي
+
+        text.split("").forEach((char, index) => {
+            let span = document.createElement("span");
+            span.innerText = char === " " ? "\u00A0" : char; // إبقاء المسافات
+            span.style.animationDelay = `${index * 0.1}s`; // تأخير لكل حرف
+            span.style.opacity = "1"; // إظهار الحرف تدريجيًا
+            element.appendChild(span);
+        });
+    });
+});
+
+
+    </script>
+
+    </body>
+</html>

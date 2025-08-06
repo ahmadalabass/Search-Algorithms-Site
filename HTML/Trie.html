@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسم شجرة Trie</title>
+    <link rel="stylesheet" href="../CSS/Trie_style.css">
+</head>
+<body>
+    <nav id="home">
+        <ul>
+            <li><i class="fas fa-home"></i><a href="Home.html">HOME</a></li>
+            <li><i class="fas fa-car"></i><a href="AVL.html">AVL</a></li>
+            <li><i class="fas fa-car-side"></i><a href="BinaryTree.html">BinaryTree</a></li>
+            <li><i class="fas fa-road"></i><a href="Trie.html">Trie</a></li>
+            <li><i class="fas fa-car-battery"></i><a href="Heap.html">Heap</a></li>
+            <li><i class="fas fa-car-battery"></i><a href="PrioritQueue.html">PrioritQueue</a></li>
+            <li><i class="fas fa-car-battery"></i><a href="Sorting Algorithms.html">Sorting Algorithms</a></li>
+            <li><i class="fas fa-car-battery"></i><a
+                href="bac.htm">Backtracking
+                </a></li>
+        </ul>
+      </nav>
+  
+      <div id="content">
+          <div class="homee" onclick="toggleMenu()">☰</div>
+      </div>
+  <script>
+      function toggleMenu() {
+      document.body.classList.toggle("menu-active");
+  }
+  
+  </script>
+    <div class="controls">
+        <input type="text" id="wordInput" placeholder="أدخل كلمة">
+        <button onclick="insertWord()">إدخال</button>
+        <input type="text" id="prefixInput" placeholder="أدخل جذر للبحث">
+        <button onclick="searchWithPrefix()">بحث</button>
+        <button onclick="clearTrie()">حذف كل الشجرة</button>
+        <div id="result"></div>
+    </div>
+    <canvas id="trieCanvas" width="1400" height="600"></canvas>
+    <script src="../JS/Trie.js"></script>
+</body>
+</html>

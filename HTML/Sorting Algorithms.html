@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقارنة خوارزميات الترتيب</title>
+    <link rel="stylesheet" href="../CSS/Sorting Algorithms.css">
+</head>
+<body>
+    <nav id="home">
+        <ul>
+            <li><i class="fas fa-home"></i><a href="Home.html">HOME</a></li>
+            <li><i class="fas fa-car"></i><a href="AVL.html">AVL</a></li>
+            <li><i class="fas fa-car-side"></i><a href="BinaryTree.html">BinaryTree</a></li>
+            <li><i class="fas fa-road"></i><a href="Trie.html">Trie</a></li>
+            <li><i class="fas fa-car-battery"></i><a href="Heap.html">Heap</a></li>
+            <li><i class="fas fa-car-battery"></i><a href="PrioritQueue.html">PriorityQueue</a></li>
+            <li><i class="fas fa-car-battery"></i><a href="Sorting Algorithms.html">Sorting Algorithms</a></li>
+            <li><i class="fas fa-car-battery"></i><a
+                href="bac.htm">Backtracking
+                </a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <div class="homee" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle("menu-active");
+        }
+    </script>
+
+    <div class="controls">
+        <input type="text" id="arrayInput" placeholder="أدخل الأرقام مفصولة بمسافات">
+        <button onclick="runBubbleSort()">Bubble Sort</button>
+        <button onclick="runSelectionSort()">Selection Sort</button>
+        <button onclick="runInsertionSort()">Insertion Sort</button>    
+        <button onclick="runMergeSort()">Merge Sort</button>
+    </div>
+
+    <canvas id="sortCanvas" width="1400" height="600" style="max-width: 100%;"></canvas>
+    <div id="result"></div>
+
+    <script src="../JS/Sorting Algorithms.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسم شجرة البحث الثنائية</title>
+    <link rel="stylesheet" href="../CSS/BinaryTerr_style.css">
+   
+</head>
+<body>
+  <nav id="home">
+    <ul>
+        <li><i class="fas fa-home"></i><a href="Home.html">HOME</a></li>
+        <li><i class="fas fa-car"></i><a href="AVL.html">AVL</a></li>
+        <li><i class="fas fa-car-side"></i><a href="BinaryTree.html">BinaryTree</a></li>
+        <li><i class="fas fa-road"></i><a href="Trie.html">Trie</a></li>
+        <li><i class="fas fa-car-battery"></i><a href="Heap.html">Heap</a></li>
+        <li><i class="fas fa-car-battery"></i><a href="PrioritQueue.html">PrioritQueue</a></li>
+        <li><i class="fas fa-car-battery"></i><a href="Sorting Algorithms.html">Sorting Algorithms</a></li>
+        <li><i class="fas fa-car-battery"></i><a
+          href="bac.htm">Backtracking
+          </a></li>
+    </ul>
+  </nav>
+
+  <div id="content">
+      <div class="homee" onclick="toggleMenu()">☰</div>
+  </div>
+<script>
+  function toggleMenu() {
+  document.body.classList.toggle("menu-active");
+}
+
+</script>
+    <div class="controls">
+        <div class="homee" onclick="toggleMenu()">☰</div>
+        <input type="number" id="valueInput" placeholder="أدخل قيمة">
+        <button onclick="insertNode()">إدخال</button>
+        <input type="number" id="deleteInput" placeholder="أدخل قيمة للحذف">
+        <button onclick="deleteNode()">حذف</button>
+        <button onclick="clearTree()">حذف كل الشجرة</button>
+        <input type="number" id="searchInput" placeholder="أدخل قيمة للبحث">
+        <button onclick="searchNode()">بحث</button>
+        <button onclick="displayInorder()">عرض ترتيب inorder</button>
+        <button onclick="displayPostorder()">عرض ترتيب Postorder</button>
+        <button onclick="displayLevelorder()">عرض ترتيب Levelorder</button>
+    </div>
+    <canvas id="treeCanvas" width="1400" height="600"></canvas>
+    <div id="result"></div>
+    <script src="../JS/BinaryTree.js"></script>
+</body>
+</html>
